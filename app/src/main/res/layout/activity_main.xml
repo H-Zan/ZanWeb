@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="#096ec8fe"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_url"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="999"
+            android:hint="请输入网址"
+            android:inputType="textUri"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:background="#6ec8fe"
+            android:gravity="center"
+            android:onClick="goWeb"
+            android:text="Go"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6ec8fe" />
+    <!--bar-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/appbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--app:layout_scrollFlags="scroll|enterAlways|snap"-->
+    <!--&ndash;&gt;-->
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_scrollFlags="scroll|enterAlways|snap"-->
+    <!--&gt;-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    需要加，否则没有效果
+    -->
+    <!--
+    android:layout_weight="66"
+    这里的weight表示权重（layout_width，layout_height不为0的情况下，越大优先级越低）
+    如果不设置，则webview会全部占满屏幕，下面的layout现实不出来
+-->
+    <com.zan.webviewdemo.wedgit.webview.NestedScrollWebView
+        android:id="@+id/wbv_main_ac"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="66" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:weightSum="4"-->
+    <!--app:layout_behavior="com.ace.ibos.aceteam.behavior.BottomNavigationViewBehavior">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/btn_back"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:text="后退"-->
+    <!--android:textColor="#fff" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/btn_forward"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:text="前进"-->
+    <!--android:textColor="#fff" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/btn_refresh"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:text="刷新"-->
+    <!--android:textColor="#fff" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/btn_menu"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:text="菜单"-->
+    <!--android:textColor="#fff" />-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_split"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="#c34aabe4"-->
+
+    <!--/>-->
+    <RelativeLayout
+        android:id="@+id/rl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#6ec8fe">
+
+        <TextView
+            android:id="@+id/tv_split"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#a24aabe4"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:onClick="onBottomBarClick"
+                android:padding="@dimen/toolbar_btn_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_go_left" />
+
+            <ImageView
+                android:id="@+id/img_forward"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:onClick="onBottomBarClick"
+                android:padding="@dimen/toolbar_btn_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_go_right"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_refresh"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:onClick="onBottomBarClick"
+                android:padding="@dimen/toolbar_btn_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_refresh"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_out"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:onClick="onBottomBarClick"
+                android:padding="@dimen/toolbar_btn_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_out"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:onClick="onBottomBarClick"
+                android:padding="@dimen/toolbar_btn_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_close"
+
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

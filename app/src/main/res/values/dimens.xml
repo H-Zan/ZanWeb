@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_0.5">0.5dp</dimen>
+    <dimen name="dimen_1.5">1.5dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_17">17dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_21">21dp</dimen>
+    <dimen name="toast_height">25dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_34">34dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_55">55dp</dimen>
+    <dimen name="dimen_58">58dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_65">65dp</dimen>
+    <dimen name="dimen_70">70dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
+    <dimen name="dimen_200">200dp</dimen>
+
+    <dimen name="txt_8">8sp</dimen>
+    <dimen name="txt_12">12sp</dimen>
+    <dimen name="txtToast">14sp</dimen>
+    <dimen name="txt_15">15sp</dimen>
+    <dimen name="txt_16">16sp</dimen>
+    <dimen name="txt_18">18sp</dimen>
+    <dimen name="toolbar">45dp</dimen>
+    <dimen name="toolbar_btn_padding">17dp</dimen>
+</resources>
